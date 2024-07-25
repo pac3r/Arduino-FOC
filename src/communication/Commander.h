@@ -91,7 +91,7 @@ class Commander
      * @param onCommand  - function pointer void function(char*)
      * @param label      - string label to be displayed when scan command sent
      */
-    void add(char id , CommandCallback onCommand, const char* label = nullptr);
+    void add(char id , std::function<void(char*)> onCommand, const char* label = nullptr);
 
     // printing variables
     VerboseMode verbose = VerboseMode::user_friendly; //!< flag signaling that the commands should output user understanable text
@@ -243,7 +243,7 @@ class Commander
     bool isSentinel(char ch);
   private:
     // Subscribed command callback variables
-    CommandCallback call_list[20];//!< array of command callback pointers - 20 is an arbitrary number
+    std::function<void(char*)> call_list[20];//!< array of command callback pointers - 20 is an arbitrary number
     char call_ids[20]; //!< added callback commands
     char* call_label[20]; //!< added callback labels
     int call_count = 0;//!< number callbacks that are subscribed

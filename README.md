@@ -1,3 +1,8 @@
+*This fork adds the following features:*
+- *FOCMotor: thread-safe 'target' and 'controller' fields*
+- *BLDCMotor: make 'alignSensor()' virtual*
+- *Commander: allow contexts on onCommand callbacks*
+
 # SimpleFOClibrary - **Simple** Field Oriented Control (FOC) **library** <br> 
 ### A Cross-Platform FOC implementation for BLDC and Stepper motors<br> based on the Arduino IDE and PlatformIO 
 

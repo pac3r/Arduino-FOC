@@ -11,7 +11,7 @@ Commander::Commander(char eol, bool echo){
 }
 
 
-void Commander::add(char id, CommandCallback onCommand, const char* label ){
+void Commander::add(char id, std::function<void(char*)> onCommand, const char* label ){
   call_list[call_count] = onCommand;
   call_ids[call_count] = id;
   call_label[call_count] = (char*)label;
