@@ -1,5 +1,4 @@
 *This fork adds the following features:*
-- *FOCMotor: thread-safe 'target' and 'controller' fields*
 - *BLDCMotor: make 'alignSensor()' virtual*
 - *Commander: allow contexts on onCommand callbacks*
 
